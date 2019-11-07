@@ -1,0 +1,136 @@
+<html>
+
+<!---CSS LINK-->
+
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <div class="bg-img">
+                <div class="container">
+                  <div class="topnav">
+                <a href="AboutHitStart.html" >ABOUT HIT START GAMING</a>
+                <a href="GuestsOfThePast.html">GUESTS OF EPISODES PAST</a>
+                <a href="HitStartGamingWebpage.html">RETURN HOME</a>
+                <a href="SocialMediaPage.html">FIND US ON SOCIAL MEDIA</a>
+                <a href="HitStartReviews.html">HIT START GAME REVIEWS</a>
+                <a href="HitStartPartners.html">HIT START PARTNERS AND AFFILIATES</a>
+                </div>
+                </div>
+              </div>    
+
+<!--ANGULAR JS GOODNESS-->
+              <center><img src="HitStartLogo1.gif" alt="Hit Start" style="width:600px;height:600px;"></center>
+              <br></br>
+              <br></br>
+              <br></br>
+
+              <script
+                src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+                <body ng-app="myApp">
+
+             
+                <div class= "AllEpisodes">     
+                <font size="5"><font face ="crimson skyline demo" <p style="color:rgb(255, 255, 255);"
+                <div  ng-controller="episodes">
+                <select ng-model="selectedItem" ng-options="nut as nut.episodetitle for nut in nuts"></select>
+              
+
+                <pre>
+                        <h1><font size="6"><font face="crimson skyline demo" color="red"><u><b>Episode Title</b></u></font></h1>
+                        <img align = right><a title={{selectedItem.episodetitle}} href={{selectedItem.episodelink}} 
+                        style = "color: #ffffff">{{selectedItem.episodetitle}} </a> 
+                        <textfield  rows="6" cols="100">{{selectedItem.episodtitle}} </textfield>
+                                
+                </pre>
+
+                <pre>
+                        <h2><font size="6"><font face="crimson skyline demo" color="red"><u><b>Episode Date</b></u></font></h2>
+                <a title={{selectedItem.episodetitle}} </a> 
+                        <textfield  rows="6" cols="100"wrap="hard"> {{selectedItem.episodedate}} </textfield>
+                </pre>
+
+              
+                <pre>
+                        <h3><font size="6"><font face="crimson skyline demo" color="red"><u><b>Episode Summary</b></u></font></h3>
+                        <a title={{selectedItem.episodetitle}}</a> 
+                        <textarea rows="6" cols="100">{{selectedItem.episodesummary}} </textarea>
+                        
+                </pre>
+
+                
+                <pre>
+                        <h4><font size="6"><font face="crimson skyline demo" color="red"><u><b>Episode Runtime</b></u></font></h4>
+                        <a title={{selectedItem.episodetitle}} </a> 
+                        <textfield  rows="6" cols="100">{{selectedItem.episoderuntime}} </textfield>
+                        
+                </pre>
+
+                        
+                <pre>
+                        <h5><font size="6"><font face="crimson skyline demo" color="red"><u><b>Episode  Total Listeners</b></u></font></h5>
+                        <a title={{selectedItem.episodetitle}}  </a> 
+                        <textfield  rows="6" cols="100">{{selectedItem.totallisteners}} </textfield>
+                        
+                </pre>
+
+                <script>
+                var app = angular.module('myApp',[]);
+                app.controller('episodes', function($scope, $http)
+                {
+                $http.get("http://localhost:8080//hitstartallepisodes/")
+                .then(  function(response)
+                {
+                console.log(response);
+                $scope.nuts = response.data;});
+                });
+            </script>
+        </div> 
+      </body> 
+
+<br></br>
+
+<!--HIT START LIVE STREAM YOUTUBE VIDEO---->  
+<center><u><p>Featured Live Stream of the Week!!</p></u></center>
+<center><left><iframe width="560" height="315" src="https://www.youtube.com/embed/n_GuRAkZGR8" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </left></center>
+
+<br></br>
+
+<!---LIVE STREAM-->
+<div></div>
+<center><u><p>Listen to the newest Episode!!</p></u></center>
+<center><audio controls autoplay loop >
+        <p>Listen to the newest episode!!</p>
+        <source src="Episode117.mp3" type="audio/mp3" />
+</audio></center>
+
+</div>
+
+<br></br>
+
+<!---INTRO MUSIC-->
+<center><p< style="color:rgb(255, 255, 255);"><font size="4"<font face="crimson skyline demo"><u><b></b> Title: Into The Light by Notaker feat. Karra <br></br>The Offical Theme Song for the Hit Start Gaming Podcast</u></b></font></b></p></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ziOYYsU5al4" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
+
+<br></br>
+
+<hr>
+
+<!--SOCIAL MEDIA FOOTER-->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+
+<footer>
+        <div class="rounded-social-buttons">
+                <center><b><h1 style="color:rgb(255, 255, 255);"><font size="3">Click the Links Below to Follow and Catch up on everything Hit Start Gaming!!</font></h1></b></center><br></br>
+                          <a class="social-button facebook" href="https://www.facebook.com/groups/hitstartgaming/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                          <a class="social-button twitter" href="https://twitter.com/HitStartPodcast" target="_blank"><i class="fab fa-twitter"></i></a>
+                          <a class="social-button youtube" href="https://www.youtube.com/channel/UCuELLERB86ZB8e6wc0bA6ZQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                          <a class="social-button twitch" href="https://www.twitch.tv/hitstartgaming" target="_blank"><i class="fab fa-twitch"></i></a>
+                          <a class="social-button spotify" href="https://open.spotify.com/show/0MNOc3JLW1tXKLDL5UYLao" target="_blank"><i class="fab fa-spotify"></i></a>
+                          <a class="social-button iTunes" href="https://podcasts.apple.com/us/podcast/hit-start-gaming/id1435125936" target="_blank"><i class="fab fa-itunes"></i></a>
+                          </div>
+      </footer>
+
+
+
+</html>
+
+

@@ -1,0 +1,123 @@
+<html>
+
+<!---LINK TO CSS-->
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+        <head>
+            <center><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+            </head>
+<!--NAV BAR-->>
+        <div class="bg-img">
+                <div class="container">
+                  <div class="topnav">
+                    <a href= "AboutHitStart.html" >ABOUT HIT START GAMING</a>
+                    <a href="GuestsOfThePast.html">GUESTS OF EPISODES PAST</a>
+                    <a href="AllTheEpisodes.html">ALL ABOUT THE EPISODES</a>
+                    <a href= "HitStartGamingWebpage.html">RETURN HOME</a>
+                    <a href="HitStartReviews.html">HIT START GAME REVIEWS</a>
+                    <a href="HitStartPartners.html">HIT START PARTNERS AND AFFILIATES</a>
+                </div>
+                </div>
+              </div>       
+        
+ <!--SOCIAL MEDIA PAGE INTRO-->
+       <body>
+       <center><font size="5"><font face ="crimson skyline demo"<H1>ALL THE SOCIAL MEDIA AND LISTENING GOODNESS!!</H1></center>
+        <p><font face="crimson skyline demo" color="white"><center><p>You can alway listen to NEW episodes of Hit Start Gaming EVERY MONDAY AND FRIDAY!!
+            You can listen to us on Spotify, iTunes, Google Play, PlayerFM and Sticher!!
+            The content varies from Gaming News, Upcoming Episodes and Live Streams or just Sharing Our Love for the Hit Start Nation!! 
+            So, click the links below to LISTEN and GIVE us all the follows. You won't regret it and we will love you for it!!
+            </center></font></p>
+      </body> 
+       <br></br> 
+      
+<!---HIT START GIF-->
+       <center><img src="HitStartLogo.gif" alt="Hit Start Logo" style="width:300px;height:300px;"></center>
+
+    <center><font size="5"><h1 style="color:red;"><u>Join the Hit Start Nation!!</u></font></h1></center>
+  
+<!---ANGULAR JS GOODNESS TEXT BARS--->​
+            <body>
+            <div ng-app="POSTapp" ng-controller="POSTctrl">
+          
+          <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">First Name</label></u>
+            
+          <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="castname" type="text" value="" /> <br /> 
+              
+          <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">Favorite Game</label></u>
+                
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="favoritegame" type="text" value="" /> <br /> 
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">"Favorite Dish"</label></u>
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="favoritedish" type="text" value="" /> <br /> 
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">Favorite Gaming Genre </label></u>
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="favoritegaminggenre" type="text" value="" /> <br /> 
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">Favorite Gaming Console</label></u>
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="favoritegamingconsole" type="text" value="" /> <br /> 
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">Favorite Character Class</label></u>
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="roleonshow" type="text" value="" /> <br /> 
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">Dream Job </label></u>
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="guestoccupation" type="text" value="" /> <br /> 
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><u><label for="name">Favorite Gaming Character</label></u>
+                <font size="2"><h1 style="color:rgb(255, 255, 255);"><input ng-model="castphotos" type="text" value="" /> <br /> 
+          
+         <button type="button" value="Submit"onclick="alert('Welcome to the Hit Start Nation!!')"
+          ng-click="makeURL(castname,favoritegame,favoritedish,favoritegaminggenre,favoritegamingconsole,roleonshow,guestoccupation,castphotos)">
+          Hit Start</button>
+           
+          
+      ​
+         
+          
+     </div>
+    </center></body> 
+<script>
+var app = angular.module('POSTapp',[]);
+app.controller('POSTctrl', function($scope,$http){
+$scope.fn = 'Brian';
+$scope.ln = 'Dill';
+$scope.id= '102475';
+$scope.email= 'hidude@gmail.com';
+$scope.lucky= '13';
+    
+$scope.makeURL = function(castname,favoritegame,favoritedish,favoritegaminggenre,favoritegamingconsole,roleonshow,guestoccupation,castphotos){
+var url = 'http://localhost:8080/newcastmembers/'+castname+'/'+favoritegame+'/'+favoritedish+'/'+favoritegaminggenre+
+'/'+favoritegamingconsole+'/'+roleonshow+'/'+guestoccupation+'/'+castphotos
+console.log(url);
+//Call the services
+$http.post(url).then(function (response) {
+if (response.data)
+$scope.output = response.data;
+$scope.msg = "Put Data Method Executed Successfully!";
+}, function (response) {
+/*$scope.msg = "Welcome to the Hit Start Nation";*/
+$scope.statusval = response.status;
+$scope.statustext = response.statusText;
+$scope.headers = response.headers();
+});
+};
+});
+</script>
+
+<hr>
+
+<!--SOCIAL MEDIA FOOTER-->>
+
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+<br>
+
+<footer>
+    <div class="rounded-social-buttons">
+        <center><b><h1 style="color:rgb(255, 255, 255);"><font size="3">Click the Links Below to Follow and Catch up on everything Hit Start Gaming!!</font></h1></b></center><br></br>
+                      <a class="social-button facebook" href="https://www.facebook.com/groups/hitstartgaming/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a class="social-button twitter" href="https://twitter.com/HitStartPodcast" target="_blank"><i class="fab fa-twitter"></i></a>
+                      <a class="social-button youtube" href="https://www.youtube.com/channel/UCuELLERB86ZB8e6wc0bA6ZQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                      <a class="social-button twitch" href="https://www.twitch.tv/hitstartgaming" target="_blank"><i class="fab fa-twitch"></i></a>
+                      <a class="social-button spotify" href="https://open.spotify.com/show/0MNOc3JLW1tXKLDL5UYLao" target="_blank"><i class="fab fa-spotify"></i></a>
+                      <a class="social-button iTunes" href="https://podcasts.apple.com/us/podcast/hit-start-gaming/id1435125936" target="_blank"><i class="fab fa-itunes"></i></a>
+                      </div>
+  </footer>
+
+
+
+</html>

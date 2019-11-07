@@ -1,0 +1,250 @@
+
+
+body 
+
+/* Background */
+	{
+		background: rgb(0, 0, 0);
+		background: -moz-linear-gradient(top, rgb(0, 0, 0) 0%, #000000 48%, rgb(255, 0, 0) 100%);
+		background: -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, #000000 48%, rgb(255, 0, 0) 100%);
+		background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #000000 48%, #9B9B9B 100%);
+	}
+	
+	p {
+		font-family: "Times New Roman", ;
+	  }
+
+	.bg-img {
+		/* The image used */
+		background-image: url("Background.jpg");
+	  
+		min-height: 380px;
+	  
+		/* Center and scale the image nicely */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	  
+		/* Needed to position the navbar */
+		position: relative;
+	  }
+	  
+	  /* Position the navbar container inside the image */
+	  .container {
+		position: absolute;
+		margin: 20px;
+		width: auto;
+	  }
+	  
+	  /* The navbar */
+	  .topnav {
+		overflow: hidden;
+		background-color: rgb(170, 17, 17);
+	  }
+	  
+	  /* Navbar links */
+	  .topnav a {
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 12px;
+		font-family: "Fantasy",ink free ;
+	  }
+	  
+	
+	textarea {
+		resize: none;
+	}
+	/* Social Media Footer */
+	.text {
+	  color: white;
+	  font-size: 20px;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  white-space: nowrap;
+	}
+	
+	.svg-inline--fa {
+	  vertical-align: -0.200em;
+	}
+	
+	.rounded-social-buttons {
+	  text-align: center;
+	}
+	
+	.rounded-social-buttons .social-button {
+	  display: inline-block;
+	  position: relative;
+	  cursor: pointer;
+	  width: 3.125rem;
+	  height: 3.125rem;
+	  border: 0.125rem solid transparent;
+	  padding: 0;
+	  text-decoration: none;
+	  text-align: center;
+	  color: #fefefe;
+	  font-size: 1.5625rem;
+	  font-weight: normal;
+	  line-height: 2em;
+	  border-radius: 1.6875rem;
+	  transition: all 0.5s ease;
+	  margin-right: 0.25rem;
+	  margin-bottom: 0.25rem;
+	}
+	
+	.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+	  -webkit-transform: rotate(360deg);
+		  -ms-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+	
+	.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+	  font-size: 25px;
+	}
+	
+	.rounded-social-buttons .social-button.facebook {
+	  background: #3b5998;
+	}
+	
+	.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+	  color: #3b5998;
+	  background: #fefefe;
+	  border-color: #3b5998;
+	}
+	
+	.rounded-social-buttons .social-button.twitter {
+	  background: #55acee;
+	}
+	
+	.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+	  color: #55acee;
+	  background: #fefefe;
+	  border-color: #55acee;
+	}
+	
+
+	.rounded-social-buttons .social-button.youtube {
+	  background: #bb0000;
+	}
+	
+	.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+	  color: #bb0000;
+	  background: #fefefe;
+	  border-color: #bb0000;
+	}
+	
+	.rounded-social-buttons .social-button.twitch {
+	  background: #81128b;
+	}
+	
+	.rounded-social-buttons .social-button.twitch:hover, .rounded-social-buttons .social-button.twitch:focus {
+	  color: #125688;
+	  background: #fefefe;
+	  border-color: #125688;
+	} 
+
+	.rounded-social-buttons .social-button.spotify {
+		background: #0aac33;
+	  }
+
+	  
+	.rounded-social-buttons .social-button.spotify:hover, .rounded-social-buttons .social-button.spotify:focus {
+		color: #0aac33;
+		background: #fefefe;
+		border-color: #009130;
+	  } 
+
+	  .rounded-social-buttons .social-button.itunes {
+		background: #ff00b3;
+	  }
+
+	  
+	.rounded-social-buttons .social-button.itunes:hover, .rounded-social-buttons .social-button.itunes:focus {
+		color: #ff00b3 ;
+		background: #ffffff;
+		border-color: #ff00b3;
+	  } 
+	  
+/* Front Page Boxes */
+	  #demoparagraph {
+		font-family: Verdana, Geneva, sans-serif;
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		-webkit-column-gap: 44px;
+		-moz-column-gap: 44px;
+		column-gap: 44px;
+		-webkit-column-rule: 1px solid rgba(255,0,0,0.51);
+		-moz-column-rule: 1px solid rgba(255,0,0,0.51);
+		column-rule: 1px solid rgba(255,0,0,0.51);
+		}
+		
+/* Game Release Table */
+		table.blueTable {
+			
+			border: 1px solid rgb(255, 0, 0);
+			background-color: rgb(255, 0, 0);
+			width: 100%;
+			height: 300px;
+			text-align: left;
+			border-collapse: collapse;
+		  }
+		 
+		  table.blueTable td, table.blueTable th {
+			border: 1px solid rgb(0, 0, 0);
+			padding: 3px 2px;
+		  }
+		  table.blueTable tbody td {
+			font-size: 20px;
+		  }
+		  table.blueTable tr:nth-child(even) {
+			background: rgb(255, 255, 255);
+		  }
+		  table.blueTable thead {
+			background: rgb(0, 0, 0);
+			background: -moz-linear-gradient(top, #000000 0%, #000000 66%, rgb(255, 8, 8) 100%);
+			background: -webkit-linear-gradient(top, #000000 0%, #000000 66%, rgb(255, 0, 0) 100%);
+			background: linear-gradient(to bottom, #000000 0%, #050505 66%, rgb(255, 0, 0) 100%);
+			border-bottom: 2px solid #444444;
+		  }
+		  table.blueTable thead th {
+			font-size: 20px;
+			font-weight: bold;
+			color: #FFFFFF;
+			border-left: 2px solid rgb(0, 0, 0);
+		  }
+		  table.blueTable thead th:first-child {
+			border-left: none;
+		  }
+		  
+		  table.blueTable tfoot {
+			font-size: 20px;
+			font-weight: bold;
+			color: rgb(0, 0, 0);
+			background: rgb(0, 0, 0);
+			background: -moz-linear-gradient(top, #000000 0%, #000000 66%, rgb(255, 0, 0) 100%);
+			background: -webkit-linear-gradient(top, #000000 0%, #000000 66%, rgb(255, 0, 0) 100%);
+			background: linear-gradient(to bottom, #000000 0%, #000000 66%, rgb(255, 0, 0) 100%);
+			border-top: 2px solid #000000;
+		  }
+		  table.blueTable tfoot td {
+			font-size: 20px;
+		  }
+		  table.blueTable tfoot .links {
+			text-align: right;
+		  }
+		  table.blueTable tfoot .links a{
+			display: inline-block;
+			background: rgb(255, 0, 0);
+			color: #FFFFFF;
+			padding: 2px 8px;
+			border-radius: 5px;
+		  }	
+		 
+		  
+		 

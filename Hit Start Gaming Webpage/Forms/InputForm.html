@@ -1,0 +1,82 @@
+<html>
+
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+​
+<body>
+<div ng-app="POSTapp" ng-controller="POSTctrl">
+    
+	<label for="name">First Name</label> 
+	<input ng-model="fn" type="text" value="" /> <br /> 
+	<label for="name">Last Name</label> 
+	<input ng-model="ln" type="text" value="" /> <br /> 
+	<label for="name">ID Num</label> 
+	<input ng-model="id" type="text" value="" /> <br /> 
+	<label for="name">Email Address</label> 
+	<input ng-model="email" type="text" value="" /> <br /> 
+	<label for="name">Rando</label> 
+	<input ng-model="lucky" type="text" value="" /> <br /> 
+    
+    	<button type="button" value="Submit" ng-click="makeURL(fn,ln,id,email,lucky)">CLICK ME</button>
+    
+    {{msg}}
+​
+    <!--  THis is A COMMENT AREA THAT DO NOT CHANGE THE OUTPUT OF THE PAGE
+​
+    MY POST GOAL URL IS:    http://localhost:8080/PPL/123424,ChuckD,PublicE,fight@thePower.com,420 -->
+​
+    
+</div>
+<script>
+    
+​
+var app = angular.module('POSTapp',[]);
+app.controller('POSTctrl', function($scope,$http){
+$scope.fn = 'HAPPY';
+$scope.ln = 'cHARLES';
+$scope.id= '102475';
+$scope.email= 'dIDDAT@POST.COM';
+$scope.lucky= '42';
+    
+$scope.makeURL = function(fn,ln,id,email,lucky){
+var url = 'http://localhost:8080/newcastmembers/'+id+'/'+fn+'/'+ln+'/'+email+'/'+lucky
+​
+var data ={
+id: id
+};
+    
+console.log(url);
+//Call the services
+​
+$http.post(url).then(function (response) {
+​
+if (response.data)
+$scope.output = response.data;
+$scope.msg = "Put Data Method Executed Successfully!";
+​
+}, function (response) {
+​
+$scope.msg = "Service not Exists";
+​
+$scope.statusval = response.status;
+​
+$scope.statustext = response.statusText;
+​
+$scope.headers = response.headers();
+​
+});
+​
+};
+​
+});
+​
+    
+</script>
+    </body>
+</html>
+Collapse
+
+
+

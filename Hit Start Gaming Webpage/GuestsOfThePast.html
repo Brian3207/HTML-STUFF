@@ -1,0 +1,121 @@
+<html>
+
+<!--CSS LINK-->
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<!--NAV BAR-->
+
+        <div class="bg-img">
+                <div class="container">
+                  <div class="topnav">
+                    <a href="AboutHitStart.html" >ABOUT HIT START GAMING</a>
+                    <a href="HitStartGamingWebpage.html">RETURN HOME</a>
+                    <a href="AllTheEpisodes.html">ALL ABOUT THE EPISODES</a>
+                    <a href="SocialMediaPage.html">FIND US ON SOCIAL MEDIA</a>
+                    <a href="HitStartReviews.html">HIT START GAME REVIEWS</a>
+                    <a href="HitStartPartners.html">HIT START PARTNERS AND AFFILIATES</a>
+                </div>
+                </div>
+              </div>
+
+<!---PAGE OPENER-->
+              <b><h2< style="color:red;"><font size="6"<font face="crimson skyline demo" color="red"><u><b>About the Guest of Hit Start Gaming</u></b></font></h2></b>
+              <p style="color:red;"><font size="5"><font face="crimson skyline demo" color="white"> 
+                      We have had some amazing guest on the show in the past who have a huge part in the gaming community 
+                      and we look forward to having alot more guest on in the future!!  <br></br>
+                 Click on a name below to get to know the Guest who have joined us on Hit Start Gaming!!</font></p>
+
+<!---ANGULAR JS GOODNESS-->  
+             <script
+                src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+                <body ng-app="myApp">
+
+             
+                <div class= "HitStartCast">     
+                <font size="5"><font face ="crimson skyline demo" <p style="color:rgb(255, 255, 255);"
+                <div  ng-controller="games">
+                <select ng-model="selectedItem" ng-options="nut as nut.castName for nut in nuts"></select>
+              
+    
+               <pre>
+            
+                <!--{{selectedItem| json}}-->
+               <a title={{selectedItem.castname}} href={{selectedItem.episodelink}}>{{selectedItem.castname}} </a> 
+               <textfield rows="6" cols="100">{{selectedItem.castphotos}} </textfield>
+               <img src={{selectedItem.castphotos}}>
+               </pre>
+
+
+               <pre>
+               <h1><font size="6"><font face="crimson skyline demo" color="red"><u><b>Favorite Dish</b></u></font></h1>
+             
+               <!--{{selectedItem| json}}-->
+               <a title={{selectedItem.castname}} href={{selectedItem.episodelink}}>{{selectedItem.castname}} </a> 
+               <textfield  rows="6" cols="100">{{selectedItem.favoritedish}} </textfield>
+               </pre>
+
+               <pre>
+               <h2><font size="6"><font face="crimson skyline demo" color="red"><u><b>Favorite Gaming Genre</b></u></font></h2>
+         
+             <!--{{selectedItem| json}}-->
+            <a title={{selectedItem.castname}} href={{selectedItem.episodelink}}>{{selectedItem.castname}} </a> 
+            <textfield  rows="6" cols="100">{{selectedItem.favoritegenre}} </textfield>
+            </pre>
+
+            <pre>
+            <h3><font size="6"><font face="crimson skyline demo" color="red"><u><b>Favorite Gaming Console</b></u></font></h3>
+            
+            <!--{{selectedItem| json}}-->
+            <a title={{selectedItem.castname}} href={{selectedItem.episodelink}}>{{selectedItem.castname}} </a> 
+            <textfield  rows="6" cols="100">{{selectedItem.favoriteconsole}} </textfield>
+            </pre>
+
+            <pre>
+            <h1><font size="6"><font face="crimson skyline demo" color="red"><u><b>Favorite Video Game</b></u></font></h1>
+            
+            <!--{{selectedItem| json}}-->
+            <a title={{selectedItem.castname}} href={{selectedItem.episodelink}}>{{selectedItem.castname}} </a> 
+            <textfield  rows="6" cols="100">{{selectedItem.favoritegame}} </textfield>
+            </pre>
+
+            <pre>
+            <h4><font size="6"><font face="crimson skyline demo" color="red"><u><b>Guest Occupation</b></u></font></h4>  
+            
+                <!--{{selectedItem| json}}-->
+            <a title={{selectedItem.castname}} href={{selectedItem.episodelink}}>{{selectedItem.castname}} </a> 
+            <textfield  rows="6" cols="100">{{selectedItem.guestoccupation}} </textfield>
+    
+                <script>
+                var app = angular.module('myApp',[]);
+                app.controller('games', function($scope, $http)
+                {
+                $http.get("http://localhost:8080/guest/")
+                .then(  function(response)
+                {
+                console.log(response);
+                $scope.nuts = response.data;});
+                });
+            </script>
+            </div> 
+            </body> 
+
+<hr>
+
+ <!--SOCIAL MEDIA FOOTER--> 
+
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+
+<footer>
+        <div class="rounded-social-buttons">
+                <center><b><h1 style="color:rgb(255, 255, 255);"><font size="3">Click the Links Below to Follow and Catch up on everything Hit Start Gaming!!</font></h1></b></center><br></br>
+                          <a class="social-button facebook" href="https://www.facebook.com/groups/hitstartgaming/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                          <a class="social-button twitter" href="https://twitter.com/HitStartPodcast" target="_blank"><i class="fab fa-twitter"></i></a>
+                          <a class="social-button youtube" href="https://www.youtube.com/channel/UCuELLERB86ZB8e6wc0bA6ZQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                          <a class="social-button twitch" href="https://www.twitch.tv/hitstartgaming" target="_blank"><i class="fab fa-twitch"></i></a>
+                          <a class="social-button spotify" href="https://open.spotify.com/show/0MNOc3JLW1tXKLDL5UYLao" target="_blank"><i class="fab fa-spotify"></i></a>
+                          <a class="social-button iTunes" href="https://podcasts.apple.com/us/podcast/hit-start-gaming/id1435125936" target="_blank"><i class="fab fa-itunes"></i></a>
+                          </div>
+      </footer>
+
+</html>
